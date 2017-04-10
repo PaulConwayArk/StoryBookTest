@@ -25,3 +25,7 @@ Button.propTypes = {
 };
 
 export default Button;
+
+class ButtonEx extends React.Component {
+  
+}

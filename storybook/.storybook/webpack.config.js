@@ -4,13 +4,27 @@ module.exports = {
   module: {
     loaders: [
       {
-        test:   /\.scss$/,
-        loaders: ['style', 'raw', 'sass'],
-        include: path.resolve(__dirname, '../css/')
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react']
+        }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+        loader: 'file-loader'
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
+    modulesDirectories: [
+      'node_modules'
+    ]
   },
 };
