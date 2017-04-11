@@ -5,12 +5,18 @@ const propTypes = {
   btnText: PropTypes.string.isRequired,
   btnStyle: PropTypes.string,
   btnSize: PropTypes.string,
+  modalSize: PropTypes.string,
+  modalTitleText: PropTypes.string,
+  modalBodyText: PropTypes.string,
 };
 
 const defaultProps = {
   btnText: 'Click Me!',
   btnStyle: 'primary',
-  btnSize : null
+  btnSize : null,
+  modalSize : null,
+  modalTitleText : null,
+  modalBodyText : null
 };
 
 class ModalView extends Component {
@@ -33,7 +39,10 @@ class ModalView extends Component {
     const {
       btnText,
       btnStyle,
-      btnSize
+      btnSize,
+      modalSize,
+      modalTitleText,
+      modalBodyText
     } = this.props;
 
     return (
@@ -45,12 +54,12 @@ class ModalView extends Component {
         >
           {btnText}
         </Button>
-        <Modal show={this.state.showModal} onHide={this.close}>
+        <Modal bsSize={modalSize} show={this.state.showModal} onHide={this.close}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>{modalTitleText}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Text in a modal</h4>
+            {modalBodyText}
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.close}>Close</Button>
