@@ -1,9 +1,12 @@
 import React , { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { storiesOf } from '@kadira/storybook';
+import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
 import ModalView from '../src/components/Modal.js'
 
+
 storiesOf('Bootstrap Modal', module)
+.addDecorator(withKnobs)
 .addWithChapters(
   'Basic Table',
   {
@@ -22,8 +25,10 @@ storiesOf('Bootstrap Modal', module)
               sectionFn: () =>
               (
                 <ModalView
-                  btnText = {'Default Modal'}
-                  modalBodyText = {'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'}
+                  btnText = {text('Button Text', 'Deafult Modal')}
+                  btnStyle = {text('Button Style', 'primary')}
+                  modalTitleText = {text('Body Ttile', 'Modal Title')}I
+                  modalBodyText = {text('Body Text', 'This is the modal body text!')}I
                  />
               ),
               options: {

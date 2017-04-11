@@ -1,11 +1,10 @@
 import React , { Component } from 'react';
 import { storiesOf } from '@kadira/storybook';
+import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
 import BootstrapTableView from '../src/components/Bootstrap_Table.js'
 
-
-
-
 storiesOf('Bootstrap Table', module)
+.addDecorator(withKnobs)
 .addWithChapters(
   'Basic Table',
   {
