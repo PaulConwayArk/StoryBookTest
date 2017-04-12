@@ -3,7 +3,7 @@ import { storiesOf } from '@kadira/storybook';
 import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
 import BootstrapTableView from '../src/components/Bootstrap_Table.js'
 
-storiesOf('Bootstrap Table', module)
+storiesOf('React Bootstrap Table', module)
 .addDecorator(withKnobs)
 .addWithChapters(
   'Basic Table',
@@ -24,6 +24,7 @@ storiesOf('Bootstrap Table', module)
             (
               <BootstrapTableView
                 dataVal = {5}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -67,6 +68,7 @@ storiesOf('Bootstrap Table', module)
                 dataVal = {15}
                 tableHeight = {120}
                 scrollTop = {'Top'}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -104,6 +106,7 @@ storiesOf('Bootstrap Table', module)
                 dataVal = {5}
                 defaultSortName = {'name'}
                 defaultSortOrder = {'desc'}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -127,6 +130,7 @@ storiesOf('Bootstrap Table', module)
               <BootstrapTableView
                 dataSort = {true}
                 dataVal = {5}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -163,6 +167,7 @@ storiesOf('Bootstrap Table', module)
               <BootstrapTableView
                 dataVal = {5}
                 filterType ={'TextFilter'}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -183,6 +188,7 @@ storiesOf('Bootstrap Table', module)
               <BootstrapTableView
                 dataVal = {5}
                 filterType ={'SelectFilter'}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -203,6 +209,7 @@ storiesOf('Bootstrap Table', module)
               <BootstrapTableView
                 dataVal = {5}
                 filterType ={'DateFilter'}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -223,6 +230,7 @@ storiesOf('Bootstrap Table', module)
               <BootstrapTableView
                 dataVal = {5}
                 search ={true}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -244,6 +252,7 @@ storiesOf('Bootstrap Table', module)
                 dataVal = {5}
                 search ={true}
                 multiColumnSearch ={true}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -280,6 +289,7 @@ storiesOf('Bootstrap Table', module)
               <BootstrapTableView
                 dataVal = {5}
                 selectRowType = {'radio'}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -300,6 +310,7 @@ storiesOf('Bootstrap Table', module)
               <BootstrapTableView
                 dataVal = {5}
                 selectRowType ={'checkbox'}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -321,6 +332,7 @@ storiesOf('Bootstrap Table', module)
                 dataVal = {5}
                 selectRowType = {'checkbox'}
                 unselectable = {[ 1, 3 ]}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -342,6 +354,7 @@ storiesOf('Bootstrap Table', module)
                 dataVal = {5}
                 selectRowType = {'checkbox'}
                 selected = {[ 0, 2, 4 ]}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -363,6 +376,7 @@ storiesOf('Bootstrap Table', module)
                 dataVal = {5}
                 selectRowType = {'checkbox'}
                 showOnlySelected = {true}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -396,6 +410,7 @@ storiesOf('Bootstrap Table', module)
               <BootstrapTableView
                 dataVal = {24}
                 pagination = {true}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -437,6 +452,7 @@ storiesOf('Bootstrap Table', module)
                 firstPage = {'First'}
                 lastPage = {'Last'}
                 paginationPosition = {'top'}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {
@@ -474,6 +490,7 @@ storiesOf('Bootstrap Table', module)
               <BootstrapTableView
                 dataVal = {6}
                 exportCSV = {true}
+                className = {text('Modal Class', '')}
               />
             ),
             options: {

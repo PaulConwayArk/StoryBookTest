@@ -6,8 +6,8 @@ require('../node_modules/bootstrap/dist/css/bootstrap.css');
 require('../node_modules/react-bootstrap-table/css/react-bootstrap-table.css');
 
 function loadStories() {
-  require('../stories/Modal_Stories');
-  require('../stories/Bootstrap_Table_Stories');
+  require('../stories/React_Bootstrap');
+  require('../stories/React_Bootstrap_Table');
 }
 
 setAddon(infoAddon);

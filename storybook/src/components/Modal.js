@@ -2,12 +2,13 @@ import React , { Component, PropTypes  } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 const propTypes = {
-  btnText: PropTypes.string.isRequired,
+  btnText: PropTypes.string,
   btnStyle: PropTypes.string,
   btnSize: PropTypes.string,
   modalSize: PropTypes.string,
   modalTitleText: PropTypes.string,
   modalBodyText: PropTypes.string,
+  className: PropTypes.string
 };
 
 const defaultProps = {
@@ -16,7 +17,8 @@ const defaultProps = {
   btnSize : null,
   modalSize : null,
   modalTitleText : null,
-  modalBodyText : null
+  modalBodyText : null,
+  className : null
 };
 
 class ModalView extends Component {
@@ -42,7 +44,8 @@ class ModalView extends Component {
       btnSize,
       modalSize,
       modalTitleText,
-      modalBodyText
+      modalBodyText,
+      className
     } = this.props;
 
     return (
@@ -54,7 +57,7 @@ class ModalView extends Component {
         >
           {btnText}
         </Button>
-        <Modal bsSize={modalSize} show={this.state.showModal} onHide={this.close}>
+        <Modal className= {className} bsSize={modalSize} show={this.state.showModal} onHide={this.close}>
           <Modal.Header closeButton>
             <Modal.Title>{modalTitleText}</Modal.Title>
           </Modal.Header>
