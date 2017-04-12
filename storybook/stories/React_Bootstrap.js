@@ -1,5 +1,4 @@
 import React , { Component } from 'react';
-import { Modal, Button } from 'react-bootstrap';
 import { storiesOf } from '@kadira/storybook';
 import { withKnobs, text, select } from '@kadira/storybook-addon-knobs';
 import ModalView from '../src/components/Modal.js';
@@ -7,7 +6,9 @@ import PanelView from '../src/components/Panel.js';
 import {btnOptions,
         btnDefaultValue,
         ModalSizeOptions ,
-        ModalSizeDefaultValue} from '../static/const.js'
+        ModalSizeDefaultValue} from '../static/const.js';
+
+
 storiesOf('React Bootstrap', module)
 .addDecorator(withKnobs)
 .addWithChapters(
