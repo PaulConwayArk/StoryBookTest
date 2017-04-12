@@ -1,50 +1,52 @@
 import React , { Component } from 'react';
 import ReactHighMaps from 'react-highcharts/ReactHighmaps';
-import maps from '../../static/maps/world';
-
-var data = [
-    ['eu', 0],
-    ['oc', 1],
-    ['af', 2],
-    ['as', 3],
-    ['na', 4],
-    ['sa', 5]
-];
+import maps from '../../static/maps/europe';
 
 var config = {
-    chart: {
-        map: 'custom/world-continents'
-    },
+  chart: {
+    spacingBottom: 20
+  },
+  title: {
+    text: 'Europe time zones'
+  },
 
-    title: {
-        text: 'Highmaps basic demo'
-    },
+  legend: {
+    enabled: true
+  },
 
-    mapNavigation: {
+  plotOptions: {
+    map: {
+      allAreas: false,
+      joinBy: ['iso-a2', 'code'],
+      dataLabels: {
         enabled: true,
-        buttonOptions: {
-            verticalAlign: 'bottom'
+        color: 'white',
+        style: {
+          fontWeight: 'bold'
         }
-    },
+      },
+      mapData: maps,
+      tooltip: {
+        headerFormat: '',
+        pointFormat: '{point.name}: <b>{series.name}</b>'
+      }
 
-    colorAxis: {
-        min: 0
-    },
+    }
+  },
 
-    series: [{
-        data: data,
-        name: 'Random data',
-        states: {
-            hover: {
-                color: '#BADA55'
-            }
-        },
-        dataLabels: {
-            enabled: true,
-            format: '{point.name}'
-        }
-    }]
+  series: [{
+    name: 'UTC',
+    data: ['IE', 'IS', 'GB', 'PT'].map(function (code) {
+      return { code: code };
+    })
+  }, {
+    name: 'UTC + 1',
+    data: ['NO', 'SE', 'DK', 'DE', 'NL', 'BE', 'LU', 'ES', 'FR', 'PL', 'CZ', 'AT', 'CH', 'LI', 'SK', 'HU', 'SI', 'IT', 'SM', 'HR', 'BA', 'YF', 'ME', 'AL', 'MK'].map(function (code) {
+      return { code: code };
+    })
+  }]
 };
+
 
 
 class HighMapsView extends Component {
