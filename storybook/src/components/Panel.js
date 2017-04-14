@@ -18,11 +18,11 @@ const defaultProps = {
 
 const ListGroupItems = [
   <ListGroup on fill>
-    <ListGroupItem>Item 1</ListGroupItem>
-    <ListGroupItem>Item 2</ListGroupItem>
-    <ListGroupItem>Item 3</ListGroupItem>
-    <ListGroupItem>Item 4</ListGroupItem>
-    <ListGroupItem>&hellip;</ListGroupItem>
+    <ListGroupItem key='Item2'>Item 2</ListGroupItem>
+    <ListGroupItem key='Item1'>Item 1</ListGroupItem>
+    <ListGroupItem key='Item3'>Item 3</ListGroupItem>
+    <ListGroupItem key='Item4'>Item 4</ListGroupItem>
+    <ListGroupItem key='Item5'>&hellip;</ListGroupItem>
   </ListGroup>
 ];
 

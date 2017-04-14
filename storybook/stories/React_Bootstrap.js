@@ -1,4 +1,4 @@
-import React  from 'react';
+import React , { Component } from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { withKnobs, text, select } from '@kadira/storybook-addon-knobs';
 import ModalView from '../src/components/Modal.js';
@@ -69,26 +69,26 @@ storiesOf('React Bootstrap', module)
           }
         ]
       },
-      {
-        title: 'Panel with List',
-        sections: [
-          {
-            sectionFn: () =>
-            (
-              <PanelView
-                defaultExpanded = {true}
-                listGroup = {true}
-              />
-            ),
-            options: {
-              showSource: false,
-              allowSourceToggling: true,
-              showPropTables: false,
-              allowPropTablesToggling: false,
-            }
-          }
-        ]
-      }
+      // {
+      //   title: 'Panel with List',
+      //   sections: [
+      //     {
+      //       sectionFn: () =>
+      //       (
+      //         <PanelView
+      //           defaultExpanded = {true}
+      //           listGroup = {true}
+      //         />
+      //       ),
+      //       options: {
+      //         showSource: false,
+      //         allowSourceToggling: true,
+      //         showPropTables: false,
+      //         allowPropTablesToggling: false,
+      //       }
+      //     }
+      //   ]
+      // }
 
     ]
   }

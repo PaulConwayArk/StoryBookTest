@@ -80,18 +80,6 @@ function addProducts(quantity) {
   return products;
 }
 
-function productNames(quantity){
-  const productNames = [];
-  const startId = productNames.length;
-  for (let i = 0; i < quantity; i++) {
-    const id = startId + i;
-    productNames.push(
-      'Item name ' + id
-    );
-  }
-  return productNames;
-}
-
 function dateFormatter(cell, row) {
   return `${('0' + cell.getDate()).slice(-2)}/${('0' + (cell.getMonth() + 1)).slice(-2)}/${cell.getFullYear()}`;
 }
@@ -151,8 +139,7 @@ class BootstrapTableView extends Component {
 
     this.filter = {
       type : filterType,
-      delay: filterDelay,
-      options: productNames(dataVal)
+      delay: filterDelay
     };
 
     this.selectRowOptions = {
@@ -183,7 +170,7 @@ class BootstrapTableView extends Component {
         <TableHeaderColumn
           dataField='name'
           dataSort={dataSort}
-          filter = {this.filter.type == 'DateFilter' ? null : this.filter}>
+          filter = {this.filter}>
           Product Name
         </TableHeaderColumn>
         <TableHeaderColumn

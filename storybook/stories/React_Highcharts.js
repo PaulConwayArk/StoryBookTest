@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { Component } from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { withKnobs, text, select } from '@kadira/storybook-addon-knobs';
 import HighchartsView from '../src/components/Highcharts.js';

@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { Component } from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
 import BootstrapTableView from '../src/components/Bootstrap_Table.js'
@@ -179,27 +179,27 @@ storiesOf('React Bootstrap Table', module)
           }
         ]
       },
-      {
-        title: 'Select Filter',
-        sections: [
-          {
-            sectionFn: () =>
-            (
-              <BootstrapTableView
-                dataVal = {5}
-                filterType ={'SelectFilter'}
-                className = {text('Modal Class', '')}
-              />
-            ),
-            options: {
-              showSource: false,
-              allowSourceToggling: true,
-              showPropTables: false,
-              allowPropTablesToggling: false,
-            }
-          }
-        ]
-      },
+      // {
+      //   title: 'Select Filter',
+      //   sections: [
+      //     {
+      //       sectionFn: () =>
+      //       (
+      //         <BootstrapTableView
+      //           dataVal = {5}
+      //           filterType ={'SelectFilter'}
+      //           className = {text('Modal Class', '')}
+      //         />
+      //       ),
+      //       options: {
+      //         showSource: false,
+      //         allowSourceToggling: true,
+      //         showPropTables: false,
+      //         allowPropTablesToggling: false,
+      //       }
+      //     }
+      //   ]
+      // },
       {
         title: 'Date Filter',
         sections: [
