@@ -1,4 +1,4 @@
-import React , { Component } from 'react';
+import React , { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import ReactHighcharts from 'react-highcharts';
 import defaultTheme from '../../static/highchartsTheme/default.js';

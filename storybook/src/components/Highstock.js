@@ -1,4 +1,4 @@
-import React , { Component } from 'react';
+import React , { Component, PropTypes } from 'react';
 import ReactHighStocks from 'react-highcharts/ReactHighstock';
 import defaultTheme from '../../static/highchartsTheme/default.js';
 import darkBlue from '../../static/highchartsTheme/dark-blue.js';
