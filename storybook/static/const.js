@@ -7,11 +7,22 @@ export const btnOptions = {
   danger: 'Danger',
   link: 'Link',
 };
-export const btnDefaultValue = 'Default';
+export const btnDefaultValue = 'default';
 
 export const ModalSizeOptions = {
   null: 'Default',
   large: 'Large',
   small: 'Small'
 };
-export const ModalSizeDefaultValue = null;
+export const ModalSizeDefaultValue = undefined;
+
+export const highchartsTheme = {
+  default: 'Default',
+  darkBlue: 'Dark Blue',
+  darkGreen: 'Dark Green',
+  darkUnica: 'Dark Unica',
+  grey: 'Grey',
+  sandSignika: 'Sand Signika'
+}
+
+export const highchartsThemeDefault = 'default'

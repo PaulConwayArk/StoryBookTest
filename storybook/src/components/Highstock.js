@@ -1,5 +1,11 @@
 import React , { Component } from 'react';
 import ReactHighStocks from 'react-highcharts/ReactHighstock';
+import defaultTheme from '../../static/highchartsTheme/default.js';
+import darkBlue from '../../static/highchartsTheme/dark-blue.js';
+import darkGreen from '../../static/highchartsTheme/dark-green.js';
+import darkUnica from '../../static/highchartsTheme/dark-unica.js';
+import grey from '../../static/highchartsTheme/grey.js';
+import sandSignika from '../../static/highchartsTheme/sand-signika.js';
 
 var data = [[1220832000000, 22.56], [1220918400000, 21.67], [1221004800000, 21.66], [1221091200000, 21.81], [1221177600000, 21.28], [1221436800000, 20.05],
 [1221523200000, 19.98], [1221609600000, 18.26], [1221696000000, 19.16], [1221782400000, 20.13], [1222041600000, 18.72], [1222128000000, 18.12], [1222214400000, 18.39],
@@ -13,27 +19,68 @@ var data = [[1220832000000, 22.56], [1220918400000, 21.67], [1221004800000, 21.6
 [1228348800000, 13.06], [1228435200000, 13.43], [1228694400000, 14.25], [1228780800000, 14.29], [1228867200000, 14.03], [1228953600000, 13.57], [1229040000000, 14.04],
 [1229299200000, 13.54]];
 
+const propTypes = {
+  highchartsTheme: PropTypes.string
+};
 
-var config = {
-  rangeSelector: {
-    selected: 1
-  },
-  title: {
-    text: 'AAPL Stock Price'
-  },
-  series: [{
-    name: 'AAPL',
-    data: data,
-    tooltip: {
-      valueDecimals: 2
-    }
-  }]
+const defaultProps = {
+  highchartsTheme: defaultTheme
 };
 
 class HighstocksView extends Component {
+  test(tc) {
+    if (tc == 'default')
+    return defaultTheme;
+
+    if (tc == 'darkBlue')
+    return darkBlue;
+
+    if (tc == 'darkGreen')
+    return darkGreen;
+
+    if (tc == 'darkUnica')
+    return darkUnica;
+
+    if (tc == 'grey')
+    return grey;
+
+    if (tc == 'gridLight')
+    return gridLight;
+
+    if (tc == 'grid')
+    return grid;
+
+    if (tc == 'sandSignika')
+    return sandSignika;
+  }
+
   render() {
+    const {
+      highchartsTheme
+    } = this.props;
+
+    var config = {
+      rangeSelector: {
+        selected: 1
+      },
+      title: {
+        text: 'AAPL Stock Price'
+      },
+      series: [{
+        name: 'AAPL',
+        data: data,
+        tooltip: {
+          valueDecimals: 2
+        }
+      }]
+    };
+
+    ReactHighStocks.Highcharts.setOptions(this.test(highchartsTheme));
     return <ReactHighStocks config={config} ref="chart"></ReactHighStocks>;
   }
 }
+
+HighstocksView.propTypes = propTypes;
+HighstocksView.defaultProps = defaultProps;
 
 export default HighstocksView;

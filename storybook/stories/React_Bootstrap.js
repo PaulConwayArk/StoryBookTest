@@ -1,4 +1,4 @@
-import React , { Component } from 'react';
+import React  from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { withKnobs, text, select } from '@kadira/storybook-addon-knobs';
 import ModalView from '../src/components/Modal.js';
