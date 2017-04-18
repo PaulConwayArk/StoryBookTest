@@ -4,7 +4,7 @@ import { withKnobs, text, select } from '@kadira/storybook-addon-knobs';
 import HighchartsView from '../src/components/Highcharts.js';
 import HighStocksView from '../src/components/Highstock.js';
 import HighMapsView from '../src/components/Highmaps.js';
-import {highchartsTheme, highchartsThemeDefault} from '../static/const.js';
+import {highchartsTheme, highchartsThemeDefault, mapsAvaiable, defaultMap} from '../static/const.js';
 
 
 storiesOf('HighCharts', module)
@@ -74,7 +74,9 @@ storiesOf('HighCharts', module)
           {
             sectionFn: () =>
             (
-              <HighMapsView />
+              <HighMapsView
+                country = {select('Maps', mapsAvaiable, defaultMap)}
+              />
             ),
             options: {
               showSource: false,

@@ -28,7 +28,7 @@ const defaultProps = {
 };
 
 class HighstocksView extends Component {
-  test(tc) {
+  selectTheme(tc) {
     if (tc == 'default')
     return defaultTheme;
 
@@ -75,7 +75,7 @@ class HighstocksView extends Component {
       }]
     };
 
-    ReactHighStocks.Highcharts.setOptions(this.test(highchartsTheme));
+    ReactHighStocks.Highcharts.setOptions(this.selectTheme(highchartsTheme));
     return <ReactHighStocks config={config} ref="chart"></ReactHighStocks>;
   }
 }

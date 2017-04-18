@@ -26,3 +26,13 @@ export const highchartsTheme = {
 }
 
 export const highchartsThemeDefault = 'default'
+
+export const mapsAvaiable = {
+  europe: 'Europe',
+  world: 'World',
+  ireland: 'Ireland',
+  italy: 'Italy'
+}
+
+export const defaultMaps = 'europe'
+ 

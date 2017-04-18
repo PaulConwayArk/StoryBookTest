@@ -17,7 +17,7 @@ const defaultProps = {
 };
 
 class HighchartsView extends Component {
-  test(tc) {
+  selectTheme(tc) {
     if (tc == 'default')
     return defaultTheme;
 
@@ -60,7 +60,7 @@ class HighchartsView extends Component {
       }]
     };
 
-    ReactHighcharts.Highcharts.setOptions(this.test(highchartsTheme));
+    ReactHighcharts.Highcharts.setOptions(this.selectTheme(highchartsTheme));
     return <ReactHighcharts config={config} ></ReactHighcharts>;
   }
 }
