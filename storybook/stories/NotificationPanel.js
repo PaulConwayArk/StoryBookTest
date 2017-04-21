@@ -6,7 +6,15 @@ import thunkMiddleware from 'redux-thunk'
 import { storiesOf, action, linkTo } from '@kadira/storybook';
 import { rootReducer } from '../src/reducers/index';
 
-const store = createStore( rootReducer, applyMiddleware(thunkMiddleware));
+const initalState = {
+  routing: null,
+  NotificationsState: {
+    notifications: [],
+    activeNotifications: [{type: 'success', value : "Hello"},{type: 'success', value : "123"}]
+  }
+}
+
+const store = createStore( rootReducer, initalState, applyMiddleware(thunkMiddleware));
 
 storiesOf('Redux React Notification ', module)
 .addDecorator((getStory) => (
