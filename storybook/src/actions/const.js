@@ -19,3 +19,4 @@ export const ModalRequestReceived = 'ModalRequestReceived';
 export const RemoveNotification = 'RemoveNotification';
 export const ClearNotifications = 'ClearNotifications';
 export const SetSubmitWorkflows = 'SetSubmitWorkflows';
+export const ClearPopUpNotifications = 'ClearPopUpNotifications';

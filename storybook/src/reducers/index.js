@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import { adjust, assoc, remove } from 'ramda';
-import { ClearNotifications, RemoveNotification, HideNotification, PushNotification, PopNotification } from '../actions/const';
+import { ClearNotifications, RemoveNotification, HideNotification, PushNotification, PopNotification, ClearPopUpNotifications } from '../actions/const';
 
 function NotificationReducer(state = [], action) {
   switch (action.type) {
@@ -20,6 +20,8 @@ function ActiveNotificationReducer(state = [], action) {
   switch (action.type) {
     case HideNotification:
       return adjust(assoc('hide', true), 0, state);
+    case ClearPopUpNotifications:
+      return [];
     case PushNotification:
       return [action.notification, ...state];
     case PopNotification:

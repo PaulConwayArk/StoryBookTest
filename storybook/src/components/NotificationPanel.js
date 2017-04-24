@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { take } from 'ramda';
-import { RemoveNotificationAction, HideNotificationAction, ClearNotificationsAction, SuccessNotificationAction, DangerNotificationAction } from '../actions';
+import { RemoveNotificationAction, HideNotificationAction, ClearNotificationsAction, NotificationAction, ClearPopUpNotificationsAction } from '../actions';
 import {  Button, Badge, Panel, ListGroup, ListGroupItem, Alert } from 'react-bootstrap';
 
 class NotificationPanel extends Component {
@@ -17,6 +17,7 @@ class NotificationPanel extends Component {
   }
 
   handleToggle() {
+    this.props.actions.clearPopUpNotifications();
     this.setState({ open: !this.state.open });
   }
 
@@ -41,7 +42,7 @@ class NotificationPanel extends Component {
           <Button
             className="close"
             onClick={_ => this.props.actions.hideNotification(i)}>
-            {i}
+            &times;
           </Button>
         </li>
       ))
@@ -53,7 +54,8 @@ class NotificationPanel extends Component {
           <h4>Notifications
             <Button
               bsStyle = {'warning'}
-              className = {`pull-right ${this.props.alerts.length > 0 ?  null : 'hide'}`}
+              className = {`${this.props.alerts.length > 0 ?  null : 'hide'}`}
+              style = {{'marginLeft' : '50px'}}
               onClick = {this.props.actions.clearNotifications}>
               Clear
             </Button>
@@ -63,7 +65,6 @@ class NotificationPanel extends Component {
 
       return (
         <div>
-
           <Button
             bsStyle = {'primary'}
             className = {`pull-left`}
@@ -96,8 +97,8 @@ class NotificationPanel extends Component {
           </Panel>
 
           <Panel
-            className = {'pull-right'}
-            style = {{'marginTop': '60px', 'width': '250px', 'background': 'transparent', 'border': 'none', '-webkit-box-shadow':'0 0 0 rgba(0, 0, 0, 0)'}}
+            className = {`pull-right ${this.state.open ?  'hide' : ''}`}
+            style = {{'marginTop': '20px', 'width': '250px', 'background': 'transparent', 'border': 'none', '-webkit-box-shadow':'0 0 0 rgba(0, 0, 0, 0)'}}
             collapsible expanded={true}>
             <ul className="list-group">
               {this.notificationHandler()}
@@ -117,11 +118,12 @@ function mapStateToProps({ NotificationsState }) {
   function mapDispatchToProps(dispatch) {
     return {
       actions: {
-        PushNotificationActionFail: () => dispatch(SuccessNotificationAction('success' )),
-        PushNotificationAction: () => dispatch(DangerNotificationAction('Failure')),
+        PushNotificationActionFail: () => dispatch(NotificationAction({type:'danger', value:'Request Failed'})),
+        PushNotificationAction: () => dispatch(NotificationAction({type:'success', value:'Request Success'})),
         hideNotification: _ => dispatch(HideNotificationAction()),
         removeNotification: i => dispatch(RemoveNotificationAction(i)),
-        clearNotifications: _ => dispatch(ClearNotificationsAction())
+        clearNotifications: _ => dispatch(ClearNotificationsAction()),
+        clearPopUpNotifications: _ => dispatch(ClearPopUpNotificationsAction())
       }
     };
   }

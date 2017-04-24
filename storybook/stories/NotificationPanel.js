@@ -10,7 +10,7 @@ const initalState = {
   routing: null,
   NotificationsState: {
     notifications: [],
-    activeNotifications: [{type: 'success', value : "Hello"},{type: 'success', value : "123"}]
+    activeNotifications: []
   }
 }
 
