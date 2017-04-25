@@ -35,4 +35,3 @@ export const mapsAvaiable = {
 }
 
 export const defaultMaps = 'europe'
- 
