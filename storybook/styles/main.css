@@ -4,3 +4,56 @@
   margin-bottom: 30px;
   font-weight: inherit;
 }
+
+.componentBackground{
+  background: lightgray;
+  margin-bottom: 15px;
+}
+
+.mainComponentSettings{
+  background: yellow;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.secondaryComponent{
+  background: lightgreen;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.SecondaryComponentSettings{
+  background: lightblue;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.axpi > table > tbody tr:nth-child(odd) {
+  background: #575A5D !important;
+  color: white;
+}
+
+.axpi > table > thead > tr > th, .axpi > table > tbody tr:nth-child(even) {
+  background: #eeefef !important;
+  color: #575A5D;
+}
+
+.k4view > table > tbody tr:nth-child(odd) {
+  background: #032734 !important;
+  color: white;
+}
+
+.k4view > table > thead > tr > th, .k4view > table > tbody tr:nth-child(even) {
+  background: #073343 !important;
+  color: white;
+}
+
+.ark > table > tbody tr:nth-child(odd) {
+  background: #3931e5 !important;
+  color: white;
+}
+
+.ark > table > thead > tr > th, .ark > table > tbody tr:nth-child(even) {
+  background: white !important;
+  color: black;
+}

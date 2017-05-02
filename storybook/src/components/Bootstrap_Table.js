@@ -23,6 +23,7 @@ const propTypes = {
   paginationSize: PropTypes.number,
   page: PropTypes.number,
   prePage: PropTypes.string,
+  theme: PropTypes.string,
   nextPage: PropTypes.string,
   firstPage: PropTypes.string,
   lastPage: PropTypes.string,
@@ -60,7 +61,8 @@ const defaultProps = {
   sizePerPageList: null,
   search: false,
   multiColumnSearch: false,
-  exportCSV: false
+  exportCSV: false,
+  theme: 'ark'
 };
 
 function addProducts(quantity) {
@@ -118,7 +120,8 @@ class BootstrapTableView extends Component {
       sizePerPageList,
       search,
       multiColumnSearch,
-      exportCSV
+      exportCSV,
+      theme
     } = this.props;
 
     this.options = {
@@ -160,6 +163,8 @@ class BootstrapTableView extends Component {
         search = { search }
         multiColumnSearch = { multiColumnSearch }
         exportCSV = { exportCSV }
+        headerContainerClass={theme}
+        bodyContainerClass={theme}
         striped hover condensed>
         <TableHeaderColumn
           dataField='id'
