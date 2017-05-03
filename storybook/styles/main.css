@@ -57,3 +57,262 @@
   background: white !important;
   color: black;
 }
+
+.header{
+  background-color: #00547E;
+  height: 80px;
+  padding: 0 10px;
+  margin: 0px;
+  z-index: 1001;
+}
+
+.headerFixed div.header{
+  position: fixed;
+}
+
+.navFixed div.header{
+  position: fixed;
+}
+
+.navFixed.header, .navFixed#left-panel {
+  position: fixed;
+}
+
+.headerFixed aside#left-panel, .headerFixed div#container, .navFixed div#container  {
+  top: 80px;
+}
+
+.footerFixed div.footer{
+  position: fixed;
+  bottom: 0;
+}
+
+.navFixed aside#left-panel {
+  height: 100%;
+  position: fixed;
+  top: 80px;
+}
+
+.main{
+  height: 1000px;
+}
+
+.footer{
+  height: 52px;
+  background: #00547E;
+  width: 100%;
+  display: block;
+  bottom: 0px;
+  z-index: 1001;
+}
+
+#left-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 904;
+}
+
+aside{
+  background: #3a3633;
+  min-height: 100%;
+  width: 220px;
+  position: fixed;
+}
+
+nav{
+  display: block;
+}
+
+nav ul {
+  width: 100%;
+  padding: 40px 28px 25px 0;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: .5em;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a {
+  line-height: normal;
+  font-size: 14px;
+  padding: 10px 10px 10px 11px;
+  color: #c0bbb7;
+  display: block;
+  font-weight: 400;
+  text-decoration: none!important;
+  position: relative;
+  border-bottom: solid 1px;
+}
+
+.listItemText{
+  margin-left: 15px;
+}
+
+
+.menu-on-top aside#left-panel {
+  width: 100%!important;
+  min-height: 0!important;
+  height: auto;
+  overflow: visible;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+  border-bottom: 1px solid #222;
+  border-top: 1px solid #333;
+}
+
+.menu-on-top aside#left-panel nav>ul>li {
+  position: relative;
+  height: auto!important;
+  padding: 0!important;
+  display: inline-block;
+  float: left;
+  border-right: 1px solid #222;
+  border-left: 1px solid #4E4E4E;
+  overflow: visible;
+}
+
+.menu-on-top aside#left-panel nav>ul>li>a {
+  display: inline-block;
+  height: 40px;
+  text-shadow: none!important;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 22px;
+  padding: 10px 9px!important;
+}
+
+.menu-on-top span.minifyme{
+  display: none;
+}
+
+.minifyme {
+  border-bottom: 1px solid #302F2F;
+  background: #454545;
+  color: #A8A8A8;
+  text-align: center;
+  padding: 0;
+  width: 36px;
+  height: 28px;
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  margin-top: 7px;
+  font-size: 19px;
+  transition: all .1s linear 0s;
+}
+
+.minifyme:hover {
+  background: #646464;
+  color: #E4E4E4;
+  right: 0;
+  width: 40px;
+  padding-right: 5px;
+}
+
+.minified #left-panel, .minified nav>ul>li {
+  overflow: visible;
+}
+
+.minified #left-panel {
+  width: 45px;
+}
+
+.minified nav>ul>li {
+  border-bottom: 1px solid #1A1817;
+  border-top: 1px solid #525151;
+}
+
+.minified nav>ul>li, .minified nav>ul>li a {
+  position: relative;
+}
+
+.minified nav>ul>li>a>.listItemText {
+  display: none;
+  position: absolute;
+  left: 40px;
+  top: -3px;
+  width: 186px;
+  height: 38px;
+  line-height: 38px;
+  background-color: #f5f5f5;
+  color: #333;
+  z-index: 3;
+  -webkit-box-shadow: 2px 1px 2px 0 rgba(0,0,0,.2);
+  -moz-box-shadow: 2px 1px 2px 0 rgba(0,0,0,.2);
+  box-shadow: 2px 1px 2px 0 rgba(0,0,0,.2);
+  border-left: 1px solid #bfbfbf;
+  border-top: 1px solid #D8D4D4;
+  border-bottom: 1px solid #fff;
+  padding-left: 12px;
+}
+
+#container {
+  margin-left: 220px;
+  padding: 0;
+  padding-bottom: 52px;
+  min-height: 500px;
+  position: relative;
+}
+
+.minified #container {
+  margin-left: 45px;
+}
+
+.menu-on-top #container {
+  margin-left: 0!important;
+  margin-top: 44px!important;
+}
+.noPadding{
+  padding: 0;
+}
+
+.component{
+  margin: 15px;
+  margin-right: 11px;
+}
+
+.componentHeader{
+  height: 25px;
+  background: grey;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.settingsModal{
+  width: 25px;
+  padding: 3px;
+  margin-right: 11px;
+  padding-left: 10px;
+  border-left: 1px solid white;
+}
+
+.componentContent{
+  border: 2px solid grey;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.react-bs-table{
+  margin: 0;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.fullscreen-mode {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  margin: 0;
+}
+.fullscreen-mode div.componentHeader{
+  border-radius: 0px
+}
+
+.fullscreen-mode div.componentContent{
+  height: auto;
+}

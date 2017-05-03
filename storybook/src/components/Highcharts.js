@@ -50,7 +50,7 @@ class HighchartsView extends Component {
 
     const config = {
       title: {
-        text: highchartsTheme
+        text: 'Highcharts'
       },
       xAxis: {
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -61,7 +61,11 @@ class HighchartsView extends Component {
     };
 
     ReactHighcharts.Highcharts.setOptions(this.selectTheme(highchartsTheme));
-    return <ReactHighcharts config={config} ></ReactHighcharts>;
+    return (
+      <div className='chart'>
+        <ReactHighcharts config={config} ></ReactHighcharts>
+      </div>
+    );
   }
 }
 
