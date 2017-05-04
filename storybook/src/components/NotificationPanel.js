@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { take } from 'ramda';
-import { RemoveNotificationAction, HideNotificationAction, ClearNotificationsAction, NotificationAction, ClearPopUpNotificationsAction } from '../actions';
+import { NotificationPanelActions } from '../actions';
 import {  Button, Badge, Panel, ListGroup, ListGroupItem, Alert } from 'react-bootstrap';
 
 class NotificationPanel extends Component {
@@ -118,12 +118,12 @@ function mapStateToProps({ NotificationsState }) {
   function mapDispatchToProps(dispatch) {
     return {
       actions: {
-        PushNotificationActionFail: () => dispatch(NotificationAction({type:'danger', value:'Request Failed'})),
-        PushNotificationAction: () => dispatch(NotificationAction({type:'success', value:'Request Success'})),
-        hideNotification: _ => dispatch(HideNotificationAction()),
-        removeNotification: i => dispatch(RemoveNotificationAction(i)),
-        clearNotifications: _ => dispatch(ClearNotificationsAction()),
-        clearPopUpNotifications: _ => dispatch(ClearPopUpNotificationsAction())
+        PushNotificationActionFail: () => dispatch(NotificationPanelActions.NotificationAction({type:'danger', value:'Request Failed'})),
+        PushNotificationAction: () => dispatch(NotificationPanelActions.NotificationAction({type:'success', value:'Request Success'})),
+        hideNotification: _ => dispatch(NotificationPanelActions.HideNotificationAction()),
+        removeNotification: i => dispatch(NotificationPanelActions.RemoveNotificationAction(i)),
+        clearNotifications: _ => dispatch(NotificationPanelActions.ClearNotificationsAction()),
+        clearPopUpNotifications: _ => dispatch(NotificationPanelActions.ClearPopUpNotificationsAction())
       }
     };
   }
