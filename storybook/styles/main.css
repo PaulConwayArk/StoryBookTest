@@ -28,36 +28,6 @@
   margin-bottom: 5px;
 }
 
-.axpi > table > tbody tr:nth-child(odd) {
-  background: #575A5D !important;
-  color: white;
-}
-
-.axpi > table > thead > tr > th, .axpi > table > tbody tr:nth-child(even) {
-  background: #eeefef !important;
-  color: #575A5D;
-}
-
-.k4view > table > tbody tr:nth-child(odd) {
-  background: #032734 !important;
-  color: white;
-}
-
-.k4view > table > thead > tr > th, .k4view > table > tbody tr:nth-child(even) {
-  background: #073343 !important;
-  color: white;
-}
-
-.ark > table > tbody tr:nth-child(odd) {
-  background: #3931e5 !important;
-  color: white;
-}
-
-.ark > table > thead > tr > th, .ark > table > tbody tr:nth-child(even) {
-  background: white !important;
-  color: black;
-}
-
 .header{
   background-color: #00547E;
   height: 80px;
@@ -279,7 +249,7 @@ nav ul li a {
 .componentHeader{
   height: 25px;
   background: grey;
-  border-radius: 10px 10px 0px 0px;
+  /*border-radius: 10px 10px 0px 0px;*/
 }
 
 .settingsModal{
@@ -292,7 +262,7 @@ nav ul li a {
 
 .componentContent{
   border: 2px solid grey;
-  border-radius: 0px 0px 5px 5px;
+  /*border-radius: 0px 0px 5px 5px;*/
 }
 
 .react-bs-table{
@@ -317,4 +287,238 @@ nav ul li a {
 .fullscreen-mode div.componentContent{
   height: 100%;
   border: 0;
+}
+
+/*K4View*/
+.k4view div.header{
+  background: #032734 !important;
+  border-bottom: 1px solid white;
+}
+
+.k4view div.main, .k4view div.componentContent{
+  background: #032734 !important;
+}
+
+.k4view div.componentHeader, .k4view div.componentContent{
+  background: #032734 !important;
+  border: 1px solid white;
+  border-bottom: 0;
+  margin-bottom: 1px;
+}
+
+.k4view div.footer{
+  background: #032734 !important;
+  border-top: 1px solid white;
+}
+
+.k4view aside#left-panel{
+  background: #032734 !important;
+  border-right: 1px solid white;
+}
+
+.k4view tr:nth-child(odd) {
+  background: #032734 !important;
+  color: white;
+}
+
+.k4view  tr:nth-child(even) {
+  background: #073343 !important;
+  color: white;
+}
+
+.k4view thead tr:nth-child(even) {
+  background: #032734 !important;
+  color: white;
+}
+
+.k4view thead tr:nth-child(odd) {
+  background: #073343 !important;
+  color: white;
+}
+
+.k4view nav ul li a{
+  color: white;
+}
+
+.k4view nav ul li a:hover{
+  background-color: #073343 !important;
+}
+
+.k4view .fa{
+  color: white
+}
+
+.k4view .highcharts-background{
+  opacity: 0
+}
+
+.k4view .highcharts-axis-labels.highcharts-xaxis-labels > text,
+.k4view .highcharts-legend-item.highcharts-line-series.highcharts-color-0.highcharts-series-0 > text,
+.k4view .highcharts-axis-labels.highcharts-yaxis-labels > text,
+.k4view .highcharts-axis.highcharts-yaxis > text,
+.k4view .highcharts-title {
+  fill: white !important;
+}
+
+/*Axpi*/
+.axpi div.header{
+  background: white !important;
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+.axpi div.main, .axpi div.componentContent{
+  background: white !important;
+}
+
+.axpi div.componentHeader, .axpi div.componentContent{
+  background: #eeefef !important;
+  border: 1px solid #e1e2e3 !important;
+  border-bottom: 0
+}
+
+.axpi div.footer{
+  background: white !important;
+  border-top: 1px solid rgba(0, 0, 0, .3);
+}
+
+.axpi aside#left-panel{
+  background: white !important;
+  border-right: 1px solid rgba(0, 0, 0, .3);
+}
+
+.axpi tr:nth-child(odd) {
+  background: #7e7f81 !important;
+  color: white;
+}
+
+.axpi tr:nth-child(even) {
+  background: #575A5D !important;
+  color: white;
+}
+
+.axpi thead tr {
+  background: #eeefef;
+}
+
+.axpi .headerContainerClass > table > thead > tr {
+  background: #eeefef !important;
+  color: #575a5d;
+}
+
+.axpi nav ul li a i.fa, .axpi nav ul li a > span.listItemText{
+  color: #8b91a0;
+  border-bottom: 0;
+}
+
+.axpi nav ul li a{
+  border: 0;
+}
+
+.axpi nav ul li a i.fa:hover, .axpi nav ul li a > span.listItemText:hover{
+  color: #e10019  !important;
+}
+.axpi aside#left-panel nav > ul > li:hover{
+  color: #e10019  !important;
+}
+
+.menu-on-top aside#left-panel{
+  border-top: 1px solid #e1e2e3;
+  border-bottom: 1px solid #e1e2e3;
+}
+
+.axpi .menu-on-top aside#left-panel nav>ul>li {
+  border-right: 1px solid #e1e2e3;
+  border-left: 1px solid #e1e2e3;
+}
+
+.axpi.minified aside#left-panel nav>ul>li{
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+}
+
+.axpi span.minifyme{
+  background: #eeefef;
+  border-bottom: 0 !important;
+}
+
+
+/*Ark*/
+.ark div.header{
+  background: white !important;
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+.ark div.main, .ark div.componentContent{
+  background: white !important;
+}
+
+.ark div.componentHeader, .ark div.componentContent{
+  background: #666 !important;
+  border: 1px solid #666 !important;
+  border-bottom: 0
+}
+
+.ark div.footer{
+  background: white !important;
+  border-top: 1px solid rgba(0, 0, 0, .3);
+}
+
+.ark aside#left-panel{
+  background: white !important;
+  border-right: 1px solid rgba(0, 0, 0, .3);
+}
+
+.ark tr:nth-child(odd) {
+  background: #3931e5 !important;
+  color: white;
+}
+
+.ark tr:nth-child(even) {
+  background: white !important;
+  color: #666;
+}
+
+.ark thead tr {
+  background: #666;
+}
+
+.ark .headerContainerClass > table > thead > tr {
+  background: #666 !important;
+  color: white;
+}
+
+.ark nav ul li a i.fa, .ark nav ul li a > span.listItemText{
+  color: #666;
+  border-bottom: 0;
+}
+
+.ark nav ul li a{
+  border: 0;
+}
+
+.ark nav ul li a i.fa:hover, .ark nav ul li a > span.listItemText:hover{
+  color: white  !important;
+}
+.ark aside#left-panel nav > ul > li:hover{
+  background: #3931e5  !important;
+}
+
+.menu-on-top aside#left-panel{
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.ark .menu-on-top aside#left-panel nav>ul>li {
+  border-right: 1px solid #666;
+  border-left: 1px solid #666;
+}
+
+.ark.minified aside#left-panel nav>ul>li{
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+}
+
+.ark span.minifyme{
+  background: #666;
+  border-bottom: 0 !important;
 }

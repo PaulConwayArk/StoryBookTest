@@ -7,14 +7,16 @@ const propTypes = {
   headerFixed: PropTypes.bool,
   footerFixed: PropTypes.bool,
   navFixed: PropTypes.bool,
-  menuTop: PropTypes.bool
+  menuTop: PropTypes.bool,
+  cssTheme: PropTypes.string
 };
 
 const defaultProps = {
   headerFixed: false,
   footerFixed: false,
   navFixed: false,
-  menuTop: false
+  menuTop: false,
+  cssTheme: 'k4view'
 };
 
 class PageLayout extends Component {
@@ -38,7 +40,8 @@ class PageLayout extends Component {
       headerFixed,
       footerFixed,
       navFixed,
-      menuTop
+      menuTop,
+      cssTheme
     } = this.props;
 
     return (
@@ -47,7 +50,8 @@ class PageLayout extends Component {
         ${headerFixed? 'headerFixed' : ''}
         ${navFixed? 'navFixed' : ''}
         ${footerFixed? 'footerFixed' : ''}
-        ${this.state.hideMenu? 'minified' : ''} `}>
+        ${this.state.hideMenu? 'minified' : ''}
+        ${cssTheme} `}>
 
         <div className={`col-lg-12 header`}></div>
         <div className={`col-lg-12 main noPadding`}>
@@ -73,7 +77,6 @@ class PageLayout extends Component {
               componentFunc={
                 <BootstrapTableView
                   dataVal = {10}
-                  theme = {'k4view'}
                 />
               }
             />
