@@ -6,3 +6,6 @@ export const PopNotification = 'PopNotification';
 export const ClearPopUpNotifications = 'ClearPopUpNotifications';
 export const CloseModal = 'CloseModal';
 export const OpenModal = 'OpenModal';
+export const DropdownSelectedItem = 'DropdownSelectedItem';
+export const CheckboxSelected = 'CheckboxSelected';
+export const DateSelected = 'DateSelected';
