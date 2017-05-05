@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
 import { adjust, assoc, remove } from 'ramda';
 import { ClearNotifications, RemoveNotification, HideNotification, PushNotification, PopNotification, ClearPopUpNotifications } from '../actions/const';
 
