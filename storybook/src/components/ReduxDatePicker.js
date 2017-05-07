@@ -2,29 +2,41 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
+import { ModalActions } from '../actions';
 
 class DatePickerView extends React.Component {
-  render() {
-    const {
-      monthsShown,
-      showMonthDropdown,
-      showYearDropdown,
-      filterDate,
-      includeDatesDays,
-      minDate,
-      maxDate,
-      showWeekNumbers
-    } = this.props;
+  constructor (props) {
+    super(props)
+    this.state = {
+      startDate: moment()
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
+  handleChange(date) {
+    this.props.actions.ChangeDatePicker(date)
+  }
+
+  isWeekday(date) {
+    const day = date.day()
+    return day !== 0 && day !== 6
+  }
+
+  render() {
     return (
-      <DatePicker monthsShown={1} />
+      <DatePicker
+        selected={this.props.DatePickerSettings.datepickerDate}
+        onChange={this.handleChange}
+        monthsShown={1}
+      />
     )
   }
 }
 
+
 function mapStateToProps({ ModalState }) {
   return {
-    Dropdown: ModalState.DropdownSettings.dropdown
+    DatePickerSettings: ModalState.DateSettings
   };
 }
 

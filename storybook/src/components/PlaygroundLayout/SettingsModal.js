@@ -15,7 +15,7 @@ class ModalView extends Component {
             <Modal.Title>Test Redux Modal</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <DatePicker />
+            {/* <DatePicker /> */}
             <Dropdown />
           </Modal.Body>
           <Modal.Footer>
@@ -29,7 +29,8 @@ class ModalView extends Component {
 
 function mapStateToProps({ ModalState }) {
   return {
-    Modal: ModalState.Modal
+    Modal: ModalState.Modal,
+    Dropdown: ModalState.DropdownSettings.dropdown
   };
 }
 
@@ -37,7 +38,8 @@ function mapDispatchToProps(dispatch) {
   return {
     actions: {
       CloseModal: () => dispatch(ModalActions.CloseModalAction()),
-      OpenModal: () => dispatch(ModalActions.OpenModalAction())
+      OpenModal: () => dispatch(ModalActions.OpenModalAction()),
+      ChangeDatePicker: date => dispatch(ModalActions.DatePickerAction(date))
     }
   };
 }
