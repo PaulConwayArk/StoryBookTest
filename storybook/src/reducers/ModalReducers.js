@@ -18,8 +18,8 @@ const ComponentSettingsstate ={
       { value: 'CCT_CSUD', label: 'CCT_CSUD' },
     ],
     selectedItem: 'CCT_CNOR',
-    datepickerDate: moment()
-  }
+  },
+  datepickerDate: moment()
 };
 
 function ModalReducer(state = ModalInitialState, action) {
@@ -35,6 +35,8 @@ function ModalReducer(state = ModalInitialState, action) {
 
 function DropdownSelectedItemReducer(state = ComponentSettingsstate, action) {
   switch (action.type){
+    case CloseModal:
+      return ComponentSettingsstate;
     case DropdownSelectedItem:
       return {...state, selectedItem: action.value };
     default:
@@ -44,6 +46,8 @@ function DropdownSelectedItemReducer(state = ComponentSettingsstate, action) {
 
 function DateSelectedReducer(state = ComponentSettingsstate, action) {
   switch (action.type){
+    case CloseModal:
+      return ComponentSettingsstate;
     case DateSelected:
       return {...state, datepickerDate: action.date };
     default:
@@ -53,5 +57,6 @@ function DateSelectedReducer(state = ComponentSettingsstate, action) {
 
 export const ModalReducers = combineReducers({
   Modal: ModalReducer,
-  DropdownSettings: DropdownSelectedItemReducer
+  DropdownSettings: DropdownSelectedItemReducer,
+  DateSettings: DateSelectedReducer
 });
