@@ -64,7 +64,7 @@
 }
 
 .main{
-  height: 1000px;
+  height: 1500px;
 }
 
 .footer{
@@ -521,4 +521,22 @@ nav ul li a {
 .ark span.minifyme{
   background: #666;
   border-bottom: 0 !important;
+}
+
+.highcharts-legend-item >text{
+  color: white !important;
+}
+
+
+.Select-control{
+  width: 250px
+}
+
+.checkboxStyle, .Select-control{
+  margin-top: 15px
+}
+
+.checkboxStyle > label{
+  margin-left: 2px;
+  margin-bottom: 5px;
 }

@@ -10,7 +10,6 @@ class DropdownView extends Component {
   }
 
   getSelectedItem(val){
-    console.log(val)
     this.props.actions.ChangeDropdownSelectedItem(val.value)
   }
 
@@ -30,7 +29,7 @@ class DropdownView extends Component {
 
 function mapStateToProps({ ModalState }) {
   return {
-    Dropdown: ModalState.DropdownSettings.dropdown
+    Dropdown: ModalState.DropdownSettings
   };
 }
 

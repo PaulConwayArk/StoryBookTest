@@ -2,6 +2,7 @@ import React , { Component, PropTypes  } from 'react';
 import Highcharts from '../Highcharts';
 import BootstrapTableView from '../Bootstrap_Table';
 import ComponentContainer from './ComponentContainer';
+import { connect } from 'react-redux';
 
 const propTypes = {
   headerFixed: PropTypes.bool,
@@ -69,8 +70,20 @@ class PageLayout extends Component {
           <div id='container'>
             <ComponentContainer
               componentFunc={
-                <Highcharts />
+                <Highcharts
+                  data={this.props.ChartBuilder}
+                />
               }
+              dropdownDisplay={true}
+            />
+
+            <ComponentContainer
+              componentFunc={
+                <Highcharts
+                  data={this.props.ChartBuilder2}
+                />
+              }
+              checboxDisplay={true}
             />
 
             <ComponentContainer
@@ -92,4 +105,12 @@ class PageLayout extends Component {
 PageLayout.propTypes = propTypes;
 PageLayout.defaultProps = defaultProps;
 
-export default PageLayout;
+function mapStateToProps({ ModalState }) {
+  return {
+    ChartBuilder: ModalState.ChartBuilder,
+    ChartBuilder2: ModalState.ChartBuilder2,
+  };
+}
+
+
+export default connect(mapStateToProps)(PageLayout);

@@ -9,11 +9,40 @@ import grey from '../../static/highchartsTheme/grey.js';
 import sandSignika from '../../static/highchartsTheme/sand-signika.js';
 
 const propTypes = {
-  highchartsTheme: PropTypes.string
+  highchartsTheme: PropTypes.object,
+  data: PropTypes.object
 };
 
 const defaultProps = {
-  highchartsTheme: defaultTheme
+  highchartsTheme: defaultTheme,
+  data: {
+    name: 'Test',
+    chart: {
+      type: 'area'
+    },
+    series: [{
+      name: 'Test',
+      data: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+    }],
+    lineWidth: 0.5,
+    marker: {radius: 2.5},
+    yAxis: {
+      title: {
+        text: '€/MWh'
+      },
+      plotLines: [{
+        value: 0,
+        width: 1,
+        color: '#808080'
+      }]
+    },
+    xAxis: {
+      title: {
+        text: 'Hour'
+      },
+      tickmarkPlacement: 'on'
+    },
+  }
 };
 
 class HighchartsView extends Component {
@@ -45,25 +74,14 @@ class HighchartsView extends Component {
 
   render() {
     const {
-      highchartsTheme
+      highchartsTheme,
+      data
     } = this.props;
-
-    const config = {
-      title: {
-        text: 'Highcharts'
-      },
-      xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-      },
-      series: [{
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 295.6, 454.4]
-      }]
-    };
 
     ReactHighcharts.Highcharts.setOptions(this.selectTheme(highchartsTheme));
     return (
       <div className='chart'>
-        <ReactHighcharts config={config} ></ReactHighcharts>
+        <ReactHighcharts config={data} ></ReactHighcharts>
       </div>
     );
   }

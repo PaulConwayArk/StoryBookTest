@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import SettingsModal from './SettingsModal';
 
 const propTypes = {
-  componentFunc: PropTypes.func,
+  componentFunc: PropTypes.object,
 }
 
 const defaultProps = {

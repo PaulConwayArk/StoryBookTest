@@ -35,6 +35,6 @@ storiesOf('Ark Playground', module)
     cssTheme={select('Theme', themeOptions, 'k4view')}
   />
 )
-// .add('Component Playground', () =>
-// <ModalPlayground />
-// )
+.add('Component Playground', () =>
+<ModalPlayground />
+)
