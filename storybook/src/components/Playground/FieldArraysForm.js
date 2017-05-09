@@ -32,7 +32,7 @@ const SecondaryComponentSettings = ({ fields }) => (
           name={hobby}
           type="text"
           component={renderField}
-          label={`Hobby #${index + 1}`}
+          label={`Settings #${index + 1}`}
         />
       </div>
     ))}

@@ -79,19 +79,19 @@ class PageLayout extends Component {
 
             <ComponentContainer
               componentFunc={
+                <BootstrapTableView
+                  dataVal = {10}
+                />
+              }
+            />
+
+            <ComponentContainer
+              componentFunc={
                 <Highcharts
                   data={this.props.ChartBuilder2}
                 />
               }
               checboxDisplay={true}
-            />
-
-            <ComponentContainer
-              componentFunc={
-                <BootstrapTableView
-                  dataVal = {10}
-                />
-              }
             />
 
           </div>

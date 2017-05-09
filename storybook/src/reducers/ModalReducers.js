@@ -18,7 +18,7 @@ const ComponentSettingsstate ={
   selectedItem: 'CCT_CNOR',
   datepickerDate: moment(),
   checkboxItems:['CCT_CNOR', 'CCT_SUD', 'CCT_SARD', 'CCT_SICI', 'CCT_NORD', 'CCT_CSUD'],
-  selectedCheckboxes:['CCTCNOR']
+  selectedCheckboxes:[]
 };
 
 const chartData = {

@@ -38,7 +38,7 @@ class ModalView extends Component {
     this.props.actions.UpdateChart(dateSeries);
   }
 
-  barChart(){
+  areaChart2(){
     const dateSeries = [];
     this.props.Checbox.selectedCheckboxes.map( (value, i) => {
 
@@ -55,7 +55,7 @@ class ModalView extends Component {
 
   buildChart(){
     this.areaChart();
-    this.barChart();
+    this.areaChart2();
     this.props.actions.CloseModalKeepState();
   }
 
