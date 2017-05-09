@@ -1,23 +1,25 @@
+import { createStore, applyMiddleware, compose } from 'redux';
+import { hashHistory } from 'react-router';
+import thunk from 'redux-thunk';
+import { routerMiddleware } from 'react-router-redux';
+import reducers from '../reducers';
 
-import { createStore, applyMiddleware } from 'redux'
-import thunkMiddleware from 'redux-thunk'
-import { rootReducer } from '../reducers';
+function reduxStore(initalState) {
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // eslint-disable-line
+  const store = createStore(reducers, initalState, composeEnhancers(
+    applyMiddleware(routerMiddleware(hashHistory), thunk)
+  ));
+  if (module.hot) {
+    // Enable Webpack hot module replacement for reducers
+    module.hot.accept('../reducers', () => {
+      // We need to require for hot reloading to work properly.
+      const nextReducer = require('../reducers');  // eslint-disable-line global-require
 
-const initalState = {
-  routing: null,
-  NotificationsState: {
-    notifications: 0,
-    activeNotifications: 0
+      store.replaceReducer(nextReducer);
+    });
   }
+
+  return store;
 }
 
-const store = createStore( rootReducer, initalState, applyMiddleware(thunkMiddleware));
-
-if(module.hot) {
-  module.hot.accept('../reducers/', () => {
-    const nextRootReducer = require('../reducers/index').default;
-    store.replaceReducer(nextRootReducer);
-  });
-}
-
-export default store;
+export default reduxStore;

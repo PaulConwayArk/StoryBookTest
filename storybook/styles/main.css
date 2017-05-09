@@ -4,3 +4,539 @@
   margin-bottom: 30px;
   font-weight: inherit;
 }
+
+.componentBackground{
+  background: lightgray;
+  margin-bottom: 15px;
+}
+
+.mainComponentSettings{
+  background: yellow;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.secondaryComponent{
+  background: lightgreen;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.SecondaryComponentSettings{
+  background: lightblue;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.header{
+  background-color: #00547E;
+  height: 80px;
+  padding: 0 10px;
+  margin: 0px;
+  z-index: 1001;
+}
+
+.headerFixed div.header{
+  position: fixed;
+}
+
+.navFixed div.header{
+  position: fixed;
+}
+
+.navFixed.header, .navFixed#left-panel {
+  position: fixed;
+}
+
+.headerFixed aside#left-panel, .headerFixed div#container, .navFixed div#container  {
+  top: 80px;
+}
+
+.footerFixed div.footer{
+  position: fixed;
+  bottom: 0;
+}
+
+.navFixed aside#left-panel {
+  height: 100%;
+  position: fixed;
+  top: 80px;
+}
+
+.main{
+  height: 1500px;
+}
+
+.footer{
+  height: 52px;
+  background: #00547E;
+  width: 100%;
+  display: block;
+  bottom: 0px;
+  z-index: 1001;
+}
+
+#left-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 904;
+}
+
+aside{
+  background: #3a3633;
+  min-height: 100%;
+  width: 220px;
+  position: fixed;
+}
+
+nav{
+  display: block;
+}
+
+nav ul {
+  width: 100%;
+  padding: 40px 28px 25px 0;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: .5em;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a {
+  line-height: normal;
+  font-size: 14px;
+  padding: 10px 10px 10px 11px;
+  color: #c0bbb7;
+  display: block;
+  font-weight: 400;
+  text-decoration: none!important;
+  position: relative;
+  border-bottom: solid 1px;
+}
+
+.listItemText{
+  margin-left: 15px;
+}
+
+
+.menu-on-top aside#left-panel {
+  width: 100%!important;
+  min-height: 0!important;
+  height: auto;
+  overflow: visible;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+  border-bottom: 1px solid #222;
+  border-top: 1px solid #333;
+}
+
+.menu-on-top aside#left-panel nav>ul>li {
+  position: relative;
+  height: auto!important;
+  padding: 0!important;
+  display: inline-block;
+  float: left;
+  border-right: 1px solid #222;
+  border-left: 1px solid #4E4E4E;
+  overflow: visible;
+}
+
+.menu-on-top aside#left-panel nav>ul>li>a {
+  display: inline-block;
+  height: 40px;
+  text-shadow: none!important;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 22px;
+  padding: 10px 9px!important;
+}
+
+.menu-on-top span.minifyme{
+  display: none;
+}
+
+.minifyme {
+  border-bottom: 1px solid #302F2F;
+  background: #454545;
+  color: #A8A8A8;
+  text-align: center;
+  padding: 0;
+  width: 36px;
+  height: 28px;
+  display: block;
+  position: absolute;
+  right: 0;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  margin-top: 7px;
+  font-size: 19px;
+  transition: all .1s linear 0s;
+}
+
+.minifyme:hover {
+  background: #646464;
+  color: #E4E4E4;
+  right: 0;
+  width: 40px;
+  padding-right: 5px;
+}
+
+.minified #left-panel, .minified nav>ul>li {
+  overflow: visible;
+}
+
+.minified #left-panel {
+  width: 45px;
+}
+
+.minified nav>ul>li {
+  border-bottom: 1px solid #1A1817;
+  border-top: 1px solid #525151;
+}
+
+.minified nav>ul>li, .minified nav>ul>li a {
+  position: relative;
+}
+
+.minified nav>ul>li>a>.listItemText {
+  display: none;
+  position: absolute;
+  left: 40px;
+  top: -3px;
+  width: 186px;
+  height: 38px;
+  line-height: 38px;
+  background-color: #f5f5f5;
+  color: #333;
+  z-index: 3;
+  -webkit-box-shadow: 2px 1px 2px 0 rgba(0,0,0,.2);
+  -moz-box-shadow: 2px 1px 2px 0 rgba(0,0,0,.2);
+  box-shadow: 2px 1px 2px 0 rgba(0,0,0,.2);
+  border-left: 1px solid #bfbfbf;
+  border-top: 1px solid #D8D4D4;
+  border-bottom: 1px solid #fff;
+  padding-left: 12px;
+}
+
+#container {
+  margin-left: 220px;
+  padding: 0;
+  padding-bottom: 52px;
+  min-height: 500px;
+  position: relative;
+}
+
+.minified #container {
+  margin-left: 45px;
+}
+
+.menu-on-top #container {
+  margin-left: 0!important;
+  margin-top: 44px!important;
+}
+.noPadding{
+  padding: 0;
+}
+
+.component{
+  margin: 15px;
+  margin-right: 11px;
+}
+
+.componentHeader{
+  height: 25px;
+  background: grey;
+  /*border-radius: 10px 10px 0px 0px;*/
+}
+
+.settingsModal{
+  width: 25px;
+  padding: 3px;
+  margin-right: 11px;
+  padding-left: 10px;
+  border-left: 1px solid white;
+}
+
+.componentContent{
+  border: 2px solid grey;
+  /*border-radius: 0px 0px 5px 5px;*/
+}
+
+.react-bs-table{
+  margin: 0;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.fullscreen-mode {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  margin: 0;
+  background: gray;
+}
+.fullscreen-mode div.componentHeader{
+  border-radius: 0px;
+}
+
+.fullscreen-mode div.componentContent{
+  height: 100%;
+  border: 0;
+}
+
+/*K4View*/
+.k4view div.header{
+  background: #032734 !important;
+  border-bottom: 1px solid white;
+}
+
+.k4view div.main, .k4view div.componentContent{
+  background: #032734 !important;
+}
+
+.k4view div.componentHeader, .k4view div.componentContent{
+  background: #032734 !important;
+  border: 1px solid white;
+  margin-bottom: 1px;
+}
+
+.k4view div.footer{
+  background: #032734 !important;
+  border-top: 1px solid white;
+}
+
+.k4view aside#left-panel{
+  background: #032734 !important;
+  border-right: 1px solid white;
+}
+
+.k4view tr:nth-child(odd) {
+  background: #032734 !important;
+  color: white;
+}
+
+.k4view  tr:nth-child(even) {
+  background: #073343 !important;
+  color: white;
+}
+
+.k4view thead tr:nth-child(even) {
+  background: #032734 !important;
+  color: white;
+}
+
+.k4view thead tr:nth-child(odd) {
+  background: #073343 !important;
+  color: white;
+}
+
+.k4view nav ul li a{
+  color: white;
+}
+
+.k4view nav ul li a:hover{
+  background-color: #073343 !important;
+}
+
+.k4view .fa{
+  color: white
+}
+
+.k4view .highcharts-background{
+  opacity: 0
+}
+
+.k4view .highcharts-axis-labels.highcharts-xaxis-labels > text,
+.k4view .highcharts-legend-item.highcharts-line-series.highcharts-color-0.highcharts-series-0 > text,
+.k4view .highcharts-axis-labels.highcharts-yaxis-labels > text,
+.k4view .highcharts-axis.highcharts-yaxis > text,
+.k4view .highcharts-title {
+  fill: white !important;
+}
+
+/*Axpi*/
+.axpi div.header{
+  background: white !important;
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+.axpi div.main, .axpi div.componentContent{
+  background: white !important;
+}
+
+.axpi div.componentHeader, .axpi div.componentContent{
+  background: #eeefef !important;
+  border: 1px solid #e1e2e3 !important;
+  border-bottom: 0
+}
+
+.axpi div.footer{
+  background: white !important;
+  border-top: 1px solid rgba(0, 0, 0, .3);
+}
+
+.axpi aside#left-panel{
+  background: white !important;
+  border-right: 1px solid rgba(0, 0, 0, .3);
+}
+
+.axpi tr:nth-child(odd) {
+  background: #7e7f81 !important;
+  color: white;
+}
+
+.axpi tr:nth-child(even) {
+  background: #575A5D !important;
+  color: white;
+}
+
+.axpi thead tr {
+  background: #eeefef;
+}
+
+.axpi .headerContainerClass > table > thead > tr {
+  background: #eeefef !important;
+  color: #575a5d;
+}
+
+.axpi nav ul li a i.fa, .axpi nav ul li a > span.listItemText{
+  color: #8b91a0;
+  border-bottom: 0;
+}
+
+.axpi nav ul li a{
+  border: 0;
+}
+
+.axpi nav ul li a i.fa:hover, .axpi nav ul li a > span.listItemText:hover{
+  color: #e10019  !important;
+}
+.axpi aside#left-panel nav > ul > li:hover{
+  color: #e10019  !important;
+}
+
+.menu-on-top aside#left-panel{
+  border-top: 1px solid #e1e2e3;
+  border-bottom: 1px solid #e1e2e3;
+}
+
+.axpi .menu-on-top aside#left-panel nav>ul>li {
+  border-right: 1px solid #e1e2e3;
+  border-left: 1px solid #e1e2e3;
+}
+
+.axpi.minified aside#left-panel nav>ul>li{
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+}
+
+.axpi span.minifyme{
+  background: #eeefef;
+  border-bottom: 0 !important;
+}
+
+
+/*Ark*/
+.ark div.header{
+  background: white !important;
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+.ark div.main, .ark div.componentContent{
+  background: white !important;
+}
+
+.ark div.componentHeader, .ark div.componentContent{
+  background: #666 !important;
+  border: 1px solid #666 !important;
+  border-bottom: 0
+}
+
+.ark div.footer{
+  background: white !important;
+  border-top: 1px solid rgba(0, 0, 0, .3);
+}
+
+.ark aside#left-panel{
+  background: white !important;
+  border-right: 1px solid rgba(0, 0, 0, .3);
+}
+
+.ark tr:nth-child(odd) {
+  background: #3931e5 !important;
+  color: white;
+}
+
+.ark tr:nth-child(even) {
+  background: white !important;
+  color: #666;
+}
+
+.ark thead tr {
+  background: #666;
+}
+
+.ark .headerContainerClass > table > thead > tr {
+  background: #666 !important;
+  color: white;
+}
+
+.ark nav ul li a i.fa, .ark nav ul li a > span.listItemText{
+  color: #666;
+  border-bottom: 0;
+}
+
+.ark nav ul li a{
+  border: 0;
+}
+
+.ark nav ul li a i.fa:hover, .ark nav ul li a > span.listItemText:hover{
+  color: white  !important;
+}
+.ark aside#left-panel nav > ul > li:hover{
+  background: #3931e5  !important;
+}
+
+.menu-on-top aside#left-panel{
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.ark .menu-on-top aside#left-panel nav>ul>li {
+  border-right: 1px solid #666;
+  border-left: 1px solid #666;
+}
+
+.ark.minified aside#left-panel nav>ul>li{
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+}
+
+.ark span.minifyme{
+  background: #666;
+  border-bottom: 0 !important;
+}
+
+.highcharts-legend-item >text{
+  color: white !important;
+  fill: white !important;
+}
+
+
+.Select-control{
+  width: 250px
+}
+
+.checkboxStyle, .Select-control{
+  margin-top: 15px
+}
+
+.checkboxStyle > label{
+  margin-left: 2px;
+  margin-bottom: 5px;
+}

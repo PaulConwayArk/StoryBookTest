@@ -1,7 +1,13 @@
 import React , { Component } from 'react';
 import { storiesOf } from '@kadira/storybook';
-import { withKnobs, text, boolean, number } from '@kadira/storybook-addon-knobs';
+import { withKnobs, text, boolean, number, select } from '@kadira/storybook-addon-knobs';
 import BootstrapTableView from '../src/components/Bootstrap_Table.js'
+
+export const themeOptions = {
+  ark: 'Ark',
+  k4view: 'K4View',
+  axpi: 'axpi'
+}
 
 storiesOf('React Bootstrap Table', module)
 .addDecorator(withKnobs)
@@ -25,6 +31,7 @@ storiesOf('React Bootstrap Table', module)
               <BootstrapTableView
                 dataVal = {5}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -42,7 +49,8 @@ storiesOf('React Bootstrap Table', module)
           {
             sectionFn: () =>
             (
-              <BootstrapTableView />
+              <BootstrapTableView
+              theme = {select('Theme', themeOptions, 'ark')} />
             ),
             options: {
               showSource: false,
@@ -69,6 +77,7 @@ storiesOf('React Bootstrap Table', module)
                 tableHeight = {120}
                 scrollTop = {'Top'}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -107,6 +116,7 @@ storiesOf('React Bootstrap Table', module)
                 defaultSortName = {'name'}
                 defaultSortOrder = {'desc'}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -131,6 +141,7 @@ storiesOf('React Bootstrap Table', module)
                 dataSort = {true}
                 dataVal = {5}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -168,6 +179,7 @@ storiesOf('React Bootstrap Table', module)
                 dataVal = {5}
                 filterType ={'TextFilter'}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -209,6 +221,7 @@ storiesOf('React Bootstrap Table', module)
               <BootstrapTableView
                 dataVal = {5}
                 filterType ={'DateFilter'}
+                theme = {select('Theme', themeOptions, 'ark')}
                 className = {text('Modal Class', '')}
               />
             ),
@@ -231,6 +244,7 @@ storiesOf('React Bootstrap Table', module)
                 dataVal = {5}
                 search ={true}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -290,6 +304,7 @@ storiesOf('React Bootstrap Table', module)
                 dataVal = {5}
                 selectRowType = {'radio'}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -311,6 +326,7 @@ storiesOf('React Bootstrap Table', module)
                 dataVal = {5}
                 selectRowType ={'checkbox'}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -333,6 +349,7 @@ storiesOf('React Bootstrap Table', module)
                 selectRowType = {'checkbox'}
                 unselectable = {[ 1, 3 ]}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -355,6 +372,7 @@ storiesOf('React Bootstrap Table', module)
                 selectRowType = {'checkbox'}
                 selected = {[ 0, 2, 4 ]}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -377,6 +395,7 @@ storiesOf('React Bootstrap Table', module)
                 selectRowType = {'checkbox'}
                 showOnlySelected = {true}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -411,6 +430,7 @@ storiesOf('React Bootstrap Table', module)
                 dataVal = {24}
                 pagination = {true}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -453,6 +473,7 @@ storiesOf('React Bootstrap Table', module)
                 lastPage = {'Last'}
                 paginationPosition = {'top'}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {
@@ -491,6 +512,7 @@ storiesOf('React Bootstrap Table', module)
                 dataVal = {6}
                 exportCSV = {true}
                 className = {text('Modal Class', '')}
+                theme = {select('Theme', themeOptions, 'ark')}
               />
             ),
             options: {

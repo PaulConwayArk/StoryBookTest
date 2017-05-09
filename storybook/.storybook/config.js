@@ -7,6 +7,7 @@ require('../node_modules/react-bootstrap-table/css/react-bootstrap-table.css');
 require('../node_modules/font-awesome/css/font-awesome.css');
 require('../node_modules/react-s-alert/dist/s-alert-default.css');
 require('../node_modules/react-datepicker/dist/react-datepicker.css');
+require('../node_modules/react-select/dist/react-select.css');
 require('../styles/main.css');
 
 function loadStories() {

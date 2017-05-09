@@ -23,6 +23,7 @@ const propTypes = {
   paginationSize: PropTypes.number,
   page: PropTypes.number,
   prePage: PropTypes.string,
+  theme: PropTypes.string,
   nextPage: PropTypes.string,
   firstPage: PropTypes.string,
   lastPage: PropTypes.string,
@@ -60,7 +61,8 @@ const defaultProps = {
   sizePerPageList: null,
   search: false,
   multiColumnSearch: false,
-  exportCSV: false
+  exportCSV: false,
+  theme: 'ark'
 };
 
 function addProducts(quantity) {
@@ -118,7 +120,8 @@ class BootstrapTableView extends Component {
       sizePerPageList,
       search,
       multiColumnSearch,
-      exportCSV
+      exportCSV,
+      theme
     } = this.props;
 
     this.options = {
@@ -150,40 +153,44 @@ class BootstrapTableView extends Component {
     }
 
     return (
-      <BootstrapTable
-        data={ addProducts(dataVal) }
-        options = { this.options }
-        height = {tableHeight}
-        scrollTop ={ scrollTop }
-        selectRow = {this.selectRowOptions}
-        pagination = {pagination}
-        search = { search }
-        multiColumnSearch = { multiColumnSearch }
-        exportCSV = { exportCSV }
-        striped hover condensed>
-        <TableHeaderColumn
-          dataField='id'
-          isKey={ true }
-          dataSort={dataSort}>
-          Product ID
-        </TableHeaderColumn>
-        <TableHeaderColumn
-          dataField='name'
-          dataSort={dataSort}
-          filter = {this.filter}>
-          Product Name
-        </TableHeaderColumn>
-        <TableHeaderColumn
-          dataField='price'
-          csvFormat={ this.csvFormatter }>
-          Product Price
-        </TableHeaderColumn>
-        <TableHeaderColumn
-          dataField='inStockDate'
-          dataFormat={ dateFormatter }
-          filter={ this.filter.type == 'DateFilter' ? this.filter : null } >
-          In Stock From</TableHeaderColumn>
-        </BootstrapTable>
+      <div className={theme}>
+        <BootstrapTable
+          data={ addProducts(dataVal) }
+          options = { this.options }
+          height = {tableHeight}
+          scrollTop ={ scrollTop }
+          selectRow = {this.selectRowOptions}
+          pagination = {pagination}
+          search = { search }
+          multiColumnSearch = { multiColumnSearch }
+          exportCSV = { exportCSV }
+          headerContainerClass={'headerContainerClass'}
+          bodyContainerClass={'bodyContainerClass'}
+          striped hover condensed>
+          <TableHeaderColumn
+            dataField='id'
+            isKey={ true }
+            dataSort={dataSort}>
+            Product ID
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            dataField='name'
+            dataSort={dataSort}
+            filter = {this.filter}>
+            Product Name
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            dataField='price'
+            csvFormat={ this.csvFormatter }>
+            Product Price
+          </TableHeaderColumn>
+          <TableHeaderColumn
+            dataField='inStockDate'
+            dataFormat={ dateFormatter }
+            filter={ this.filter.type == 'DateFilter' ? this.filter : null } >
+            In Stock From</TableHeaderColumn>
+          </BootstrapTable>
+      </div>
       );
     }
   }
