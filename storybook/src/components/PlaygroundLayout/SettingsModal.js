@@ -6,7 +6,7 @@ import Dropdown from '../ReduxDropDowns';
 import DatePicker from '../ReduxDatePicker';
 import CheckboxPicker from '../ReduxCheckbox';
 import ChartData from '../../../static/components/componentInfo.json';
-import barChartData from '../../../static/components/componentInfo2.json';
+import ChartData2 from '../../../static/components/componentInfo2.json';
 import { filter, where, contains, prop } from 'ramda';
 
 
@@ -43,7 +43,7 @@ class ModalView extends Component {
     this.props.Checbox.selectedCheckboxes.map( (value, i) => {
 
       const objectFilter = where({Zona: contains(value)});
-      const filtered = filter(objectFilter)(ChartData.value);
+      const filtered = filter(objectFilter)(ChartData2.value);
       const data  = filtered.map(prop('Value'));
       dateSeries.push({
         name: value,
@@ -74,10 +74,10 @@ class ModalView extends Component {
           </Modal.Header>
           <Modal.Body>
             <DatePicker />
-            <Dropdown />
-            <CheckboxPicker />
-            {/* {dropdownDisplay ? <Dropdown /> : null}
-            {checboxDisplay ? <CheckboxPicker /> : null} */}
+            {/* <Dropdown />
+            <CheckboxPicker /> */}
+            {dropdownDisplay ? <Dropdown /> : null}
+            {checboxDisplay ? <CheckboxPicker /> : null}
           </Modal.Body>
           <Modal.Footer>
             <Button bsStyle='primary' onClick={this.buildChart}>Apply</Button>

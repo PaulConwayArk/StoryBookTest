@@ -4,10 +4,14 @@ import SettingsModal from './SettingsModal';
 
 const propTypes = {
   componentFunc: PropTypes.object,
+  dropdownDisplay: PropTypes.bool,
+  checboxDisplay: PropTypes.bool,
 }
 
 const defaultProps = {
-  componentFunc: null
+  componentFunc: null,
+  dropdownDisplay: false,
+  checboxDisplay: false
 }
 
 class portalComponent extends Component {
@@ -23,6 +27,8 @@ class portalComponent extends Component {
 
   render() {
     const {
+      dropdownDisplay,
+      checboxDisplay,
       componentFunc
     } = this.props;
 
@@ -30,7 +36,12 @@ class portalComponent extends Component {
       <div className={`component ${this.state.isFullscreen? 'fullscreen-mode':''}`}>
         <div className='componentHeader'>
           <span onClick={this.fullScreen} className='pull-right settingsModal'><i className='fa fa-arrows-alt'/></span>
-          <span className='pull-right settingsModal'><SettingsModal /></span>
+          <span className='pull-right settingsModal'>
+            <SettingsModal
+              dropdownDisplay={dropdownDisplay}
+              checboxDisplay={checboxDisplay}
+            />
+          </span>
         </div>
         <div className='componentContent'>
           {componentFunc}
